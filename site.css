@@ -95,6 +95,10 @@ main {
     animation-delay: 0.9s;
 }
 
+#stars-1 {
+    width: 50%;
+}
+
 .stars {
     animation: twinkle 2s infinite ease-in-out;
 }
@@ -113,6 +117,7 @@ main {
 
 .links {
     padding-bottom: 1rem;
+    width: 100vw;
 }
 
 a {
@@ -130,7 +135,7 @@ a:hover {
 
 @media screen and (max-width: 1650px) {
     .name-section, .name-bkg {
-        width: 80%;
+        width: 50%;
     }
 
     .filler-section {
@@ -138,7 +143,7 @@ a:hover {
     }
 
     .design-section {
-        width: 19%;
+        width: 49%;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -154,6 +159,10 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
+    body, main {
+        overflow: auto;
+    }
+
     main {
         flex-direction: column;
         justify-content: space-between;
