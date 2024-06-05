@@ -166,6 +166,7 @@ a:hover {
     main {
         flex-direction: column;
         justify-content: space-between;
+        height: 95vh;
     }
 
     .name-section, .name-bkg {
