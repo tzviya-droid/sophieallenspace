@@ -45,3 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
         animateText(document.getElementById('allen'), 'allen', 33, 5);
     });
 });
+
+function copyEmail() {
+    navigator.clipboard.writeText('contact@sophieallen.space').then(() => {
+        const tooltipText = document.getElementById('tooltipText');
+        tooltipText.style.visibility = 'visible';
+        tooltipText.style.opacity = '1';
+        setTimeout(() => {
+            tooltipText.style.visibility = 'hidden';
+            tooltipText.style.opacity = '0';
+        }, 2000); // Hide the tooltip after 2 seconds
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}

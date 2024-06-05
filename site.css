@@ -128,9 +128,14 @@ a {
     transition: all 0.1s ease;
 }
 
-a:hover {
+a:hover:not(.disabled) {
     filter: drop-shadow(-3px 4px 0px black);
     transform: translate(5px, -5px);
+}
+
+.disabled {
+    color: #ffffff40;
+    cursor: default;
 }
 
 @media screen and (max-width: 1650px) {
@@ -159,7 +164,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-    main {
+    body {
         overflow-y: scroll;
     }
 
@@ -241,4 +246,25 @@ a:hover {
         opacity: 0.5;
         box-shadow: 0 0 15px 15px #FFF;
     }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    opacity: 0;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+    filter: drop-shadow(-3px 4px 0px black);
+    transform: translate(3px, -3px);
+    width: max-content;
 }
