@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function copyEmail() {
-    navigator.clipboard.writeText('contact@sophieallen.space').then(() => {
+    navigator.clipboard.writeText('sophie.allen10@proton.me').then(() => {
         const tooltipText = document.getElementById('tooltipText');
         tooltipText.style.visibility = 'visible';
         tooltipText.style.opacity = '1';
