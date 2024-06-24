@@ -8,11 +8,27 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     font-family: 'Consolas', 'Courier New', monospace;
     font-weight: 500;
     color: #FFF;
+    text-align: center;
 }
 
 .title {
-    font-size: 13rem;
+    font-size: 700%;
     margin-top: 0;
+}
+
+.repository {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: rgb(255 255 255 / 10%);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: background-color 0.25s ease;
+}
+
+.repository:hover {
+    background-color: rgb(255 255 255 / 25%);
 }
 
 main {
@@ -26,16 +42,32 @@ main {
 }
 
 .section-name {
-    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     height: 100%;
+    transition: width 0.5s ease;
+}
+
+.block-name-text {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.block-name-bkg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    transition: width 0.5s ease;
 }
 
 .section-planet,
 .section-satellite {
-    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,21 +75,11 @@ main {
     height: 100%;
 }
 
-.block-name-text {
-    margin: auto;
-}
-
-.block-name-bkg {
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    transition: width 0.5s ease;
-}
-
 #saturn, #satellite {
-    padding: 0rem 2rem;
+    width: -moz-available;
     height: 20rem;
     animation: bop 2.5s infinite ease-in-out;
+    transition: height 0.5s ease;
 }
 
 #satellite {
@@ -84,24 +106,48 @@ main {
     animation-delay: 0.9s;
 }
 
-/*@media screen and (max-width: 1650px) {
-
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        overflow-y: scroll;
+@media screen and (min-width: 1024px) {
+    .section-name {
+        width: 60%;
     }
 
+    .section-planet,
+    .section-satellite {
+        width: 30%;
+        padding: 0rem 2rem;
+    }
 }
 
-@media screen and (min-width: 425px) {
-    
+@media screen and (max-width: 1024px) {
+    .section-name {
+        width: 10%;
+    }
+
+    .section-planet,
+    .section-satellite {
+        width: 40%;
+    }
+
+    #saturn, #satellite {
+        height: 15rem;
+    }
 }
 
-@media screen and (min-width: 1000px) {
-    
-}*/
+@media screen and (max-width: 425px) {
+    .section-name {
+        width: 0%;
+    }
+
+    .section-planet,
+    .section-satellite {
+        width: 50%;
+        padding: 0rem 0rem;
+    }
+
+    #saturn, #satellite {
+        height: 20rem;
+    }
+}
 
 @keyframes bop {
     0%, 100% {
