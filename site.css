@@ -10,84 +10,53 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     color: #FFF;
 }
 
-.title, .subtitle {
-    margin: 0.3rem 1rem;
-    display: flex;
-}
-
-.title span, .subtitle span {
-    display: inline-block;
-    transition: all 0.1s ease;
-    filter: drop-shadow(-5px 6px 0px #5720A8);
-}
-
 .title {
-    font-size: 7rem;
-}
-
-.subtitle {
-    font-size: 4rem;
+    font-size: 13rem;
+    margin-top: 0;
 }
 
 main {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     overflow: hidden;
 }
 
-.name-section {
+.section-name {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.section-planet,
+.section-satellite {
+    width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
-    transition: width 0.5s ease;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
-.name-section > div {
-    display: flex;
-}
-
-.name {
+.block-name-text {
     margin: auto;
-    margin-top: 22%;
 }
 
-.name-bkg {
+.block-name-bkg {
     position: absolute;
-    width: inherit;
-    width: 40%;
+    height: 100%;
     z-index: -1;
     transition: width 0.5s ease;
 }
 
-.name-bkg > svg {    
-    height: auto;
-}
-
-.filler-section {
-    width: 5%;
-    transition: width 0.5s ease;
-}
-
-.design-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 55%;
-    transition: width 0.5s ease;
-}
-
-.design-section > div {
-    width: 50%;
-}
-
-.design-section > div > svg {
-    padding: 10px;
-    max-width: -webkit-fill-available;
-}
-
 #saturn, #satellite {
+    padding: 0rem 2rem;
+    height: 20rem;
     animation: bop 2.5s infinite ease-in-out;
 }
 
@@ -115,52 +84,8 @@ main {
     animation-delay: 0.9s;
 }
 
-.links {
-    padding-bottom: 1rem;
-    width: 100vw;
-}
+/*@media screen and (max-width: 1650px) {
 
-a {
-    text-decoration: none;
-    font-size: 7rem;
-    margin: 0rem 2rem;
-    display: inline-block;
-    transition: all 0.1s ease;
-}
-
-a:hover:not(.disabled) {
-    filter: drop-shadow(-3px 4px 0px black);
-    transform: translate(5px, -5px);
-}
-
-.disabled {
-    color: #ffffff40;
-    cursor: default;
-}
-
-@media screen and (max-width: 1650px) {
-    .name-section, .name-bkg {
-        width: 50%;
-    }
-
-    .filler-section {
-        width: 1%;
-    }
-
-    .design-section {
-        width: 49%;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
-
-    .design-section > div {
-        width: 100%;
-    }
-
-    #stars-1 {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -168,64 +93,16 @@ a:hover:not(.disabled) {
         overflow-y: scroll;
     }
 
-    main {
-        flex-direction: column;
-        justify-content: space-between;
-        height: 90vh;
-    }
-
-    .name-section, .name-bkg {
-        height: -webkit-fill-available;
-        width: 100%;
-    }
-
-    .filler-section {
-        width: 0%;
-    }
-
-    .design-section {
-        width: 100%;
-        flex-direction: row;
-    }
-
-    .design-section > div {
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .design-section > div > svg {
-        padding: 50px;
-        height: auto;
-    }
-
-    #stars-2 {
-        display: none;
-    }
-
-    .links {
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    a {
-        margin: 1rem 2rem;
-    }
 }
 
 @media screen and (min-width: 425px) {
-    a {
-        font-size: 5rem;
-    }
+    
 }
 
 @media screen and (min-width: 1000px) {
-    a {
-        font-size: 2rem;
-    }
+    
+}*/
 
-}
 @keyframes bop {
     0%, 100% {
         transform: translateY(0);
@@ -246,25 +123,4 @@ a:hover:not(.disabled) {
         opacity: 0.5;
         box-shadow: 0 0 15px 15px #FFF;
     }
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    opacity: 0;
-    font-size: 1rem;
-    transition: opacity 0.3s;
-    filter: drop-shadow(-3px 4px 0px black);
-    transform: translate(3px, -3px);
-    width: max-content;
 }

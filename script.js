@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const randomChar = () => {
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         return chars.charAt(Math.floor(Math.random() * chars.length));
@@ -41,9 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealNextCharacter();
     };
 
-    animateText(document.getElementById('sophie'), 'sophie', 30, 5, () => {
-        animateText(document.getElementById('allen'), 'allen', 33, 5);
-    });
+    animateText(document.getElementById('sophie'), 'Σοφία', 30, 5);
 });
 
 function copyEmail() {
