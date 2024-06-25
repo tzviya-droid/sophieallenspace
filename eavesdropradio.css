@@ -1,0 +1,77 @@
+﻿body {
+    background-color: #111E6C;
+    margin: 0px;
+    overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 500;
+    color: #FFF;
+    text-align: center;
+    transition: color 0.25s ease-in-out;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3, a {
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: rgb(255 255 255 / 50%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(17 30 108 / 50%);
+    backdrop-filter: blur(1px);
+    border-bottom: 5px solid #111E6C;
+    width: 100%;
+}
+
+.section-heading h1 {
+    text-shadow: -2px -2px 0px #111E6C, 2px -2px 0 #111E6C, -2px 2px 0 #111E6C, 2px 2px 0 #111E6C;
+}
+
+.section-heading-graphic {
+    position: absolute;
+    z-index: -1;
+}
+
+.l-waveform {
+    padding: 0rem 1rem;
+}
+
+.section-about {
+    padding: 1rem;
+    max-width: 1440px;
+}
+
+.section-download {
+    padding: 1rem;
+}
+
+.section-download div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
