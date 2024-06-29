@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Consolas', monospace, 'Courier New';
     font-weight: 500;
     color: #FFF;
     text-align: center;
@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h3, a {
@@ -49,6 +49,7 @@ main {
 
 .section-heading h1 {
     text-shadow: -2px -2px 0px #111E6C, 2px -2px 0 #111E6C, -2px 2px 0 #111E6C, 2px 2px 0 #111E6C;
+    margin: 5vw 0;
 }
 
 .section-heading-graphic {
@@ -63,6 +64,11 @@ main {
 .section-about {
     padding: 1rem;
     max-width: 1440px;
+}
+
+.section-about h2,
+.section-about h3 {
+    margin: 5vw 0;
 }
 
 .section-download {
