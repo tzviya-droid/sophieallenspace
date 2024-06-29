@@ -49,7 +49,6 @@ main {
 
 .section-heading h1 {
     text-shadow: -2px -2px 0px #111E6C, 2px -2px 0 #111E6C, -2px 2px 0 #111E6C, 2px 2px 0 #111E6C;
-    margin: 5vw 0;
 }
 
 .section-heading-graphic {
@@ -64,11 +63,6 @@ main {
 .section-about {
     padding: 1rem;
     max-width: 1440px;
-}
-
-.section-about h2,
-.section-about h3 {
-    margin: 5vw 0;
 }
 
 .section-download {
